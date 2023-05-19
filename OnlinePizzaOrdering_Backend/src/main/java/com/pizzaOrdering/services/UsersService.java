@@ -26,5 +26,8 @@ public interface UsersService{
 	
 	
 	//DELETE
-	Users deleteUsers(long id);	
+	Users deleteUsers(long id);
+
+
+//	Users deleteUsers();	
 }

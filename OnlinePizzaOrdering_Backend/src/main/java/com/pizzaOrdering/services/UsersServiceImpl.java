@@ -7,8 +7,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.pizzaOrdering.dao.UsersDao;
+import com.pizzaOrdering.exception.ResourceNotFoundException;
 import com.pizzaOrdering.model.Users;
-import com.pizzadelivery.custom_exceptions.ResourceNotFoundException;
+
 
 @Service
 @Transactional
