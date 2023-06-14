@@ -8,7 +8,7 @@ import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.Table;
 
-
+import org.hibernate.validator.constraints.Length;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -27,7 +27,7 @@ import lombok.ToString;
 @Entity
 public class Users extends BaseEntity{
 	
-	//@Length (min=4,max=20,message="Invalid or Blank first Name!!")
+	@Length (min=4,max=20,message="Invalid or Blank first Name!!")
 	@Column(name="first_name", length = 50)
 	private String first_name;
 	
@@ -38,7 +38,7 @@ public class Users extends BaseEntity{
 	private String email;
 	
 	@Column(nullable = false)  //password should not be null
-	//@Length(min = 5, max= 50)
+	@Length(min = 5, max= 50)
 	private String password;
 	
 	@Column(length=10, unique=true)  //mobile number should be unique
@@ -47,6 +47,7 @@ public class Users extends BaseEntity{
 	@Enumerated(EnumType.STRING)  //our users role is in  ==> CUSTOMER, DELIVERYPARTNER, ADMIN, MANAGER which are in ENUMTYPE  
 	@Column(name="user_role", length = 30)
 	private Role userRole;
+	
 
 
 

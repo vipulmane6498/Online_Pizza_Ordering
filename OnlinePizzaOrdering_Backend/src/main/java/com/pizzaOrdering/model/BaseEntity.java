@@ -15,12 +15,12 @@ import lombok.ToString;
 
 @Setter
 @Getter
-@NoArgsConstructor
-@AllArgsConstructor
-@ToString
+//@NoArgsConstructor
+//@AllArgsConstructor
+//@ToString
 public class BaseEntity {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)  		//to generate automatic unique Id
-	private long id;  											//id => common for all implementation
+	private Long id;  											//id => common for all implementation
 }

@@ -17,9 +17,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.pizzaOrdering.exception.ResourceNotFoundException;
 import com.pizzaOrdering.model.Address;
+import com.pizzaOrdering.model.Pizza;
 import com.pizzaOrdering.model.Users;
 import com.pizzaOrdering.services.AddressService;
+import com.pizzaOrdering.services.CategoryService;
+import com.pizzaOrdering.services.PizzaService;
 import com.pizzaOrdering.services.UsersService;
 
 @RestController
@@ -32,6 +36,11 @@ public class UserController {
 	@Autowired
 	AddressService addressService;
 	
+	@Autowired
+	PizzaService pizzaService;
+	
+
+	
 	//user registration ==> that can be customer, admin,deliveryBoy-----------------------------------------------------
 	@PostMapping("/register")  //go to postman and post new user data in JSON format to register
 	public Users register(@RequestBody Users users) {
@@ -39,7 +48,7 @@ public class UserController {
 	}
 	
 	
-	//user login ==> that can be customer, admin,deliveryboy------------------------------------------------------------
+	//user login ==> that can be customer, admin,deliveryPartner------------------------------------------------------------
 	@PostMapping("/login")
 	ResponseEntity<Users> loginCustomer(@RequestParam String email, @RequestParam String password) {
 		Users users1 = this.usersService.login(email, password);
@@ -65,7 +74,8 @@ public class UserController {
 	}
 	
 	
-	//Address------------------------------------------------------
+//Address------------------------------------------------------
+	
 	@PostMapping("/address")
 	public Address addAddress(@RequestBody Address address) {
 		this.addressService.addAddress(address);
@@ -94,8 +104,47 @@ public class UserController {
 	}
 	
 	
+//Pizza Home Page or handle by customer------------------------------------------------------
 	
+	//show all pizza on home page
+	@GetMapping("/Pizzas")
+	public List<Pizza> getAllPizza(){
+		return this.pizzaService.findAllPizza();
+		}
 	
+	//show pizzas by category
+	@GetMapping("/pizzabycat/id/{id}")
+	public List<Pizza> getPizzaByCatId(@PathVariable long id){
+		return pizzaService.findByCategoryID(id);
+	}
+	
+	@GetMapping("/pizza/id/{id}")
+	public Pizza getPizzaById(@PathVariable long id) {
+		return pizzaService.PizzaByID(id).orElseThrow(()-> new ResourceNotFoundException("Invalid id, Please enter valid id."));
+	}
 	
 
+//------------------------------------------------------------------
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
