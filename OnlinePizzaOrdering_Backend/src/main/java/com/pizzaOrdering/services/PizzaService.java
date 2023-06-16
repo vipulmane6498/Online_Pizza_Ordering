@@ -19,4 +19,7 @@ public interface PizzaService {
 	public Optional<Pizza> PizzaByID(Long id);
 	
 	public List<Pizza> findByCategoryID(long cat_id);
+	
+	public Pizza getByID(Long id);
+
 }

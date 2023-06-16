@@ -65,5 +65,10 @@ public class UsersServiceImpl implements UsersService {
 		return null;
 	}
 
+//	public Users getByID(long id) {
+//		return usersDao.findById(id).orElseThrow(() -> new ResourceNotFoundException("user not found"));
+//		
+//	}
+
 
 }

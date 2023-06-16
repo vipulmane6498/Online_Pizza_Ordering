@@ -19,11 +19,15 @@ import org.springframework.web.bind.annotation.RestController;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.pizzaOrdering.exception.ResourceNotFoundException;
 import com.pizzaOrdering.model.Address;
+import com.pizzaOrdering.model.CartItem;
+import com.pizzaOrdering.model.Order;
 import com.pizzaOrdering.model.Pizza;
+import com.pizzaOrdering.model.ShoppingCart;
 import com.pizzaOrdering.model.Users;
 import com.pizzaOrdering.services.AddressService;
 import com.pizzaOrdering.services.CategoryService;
 import com.pizzaOrdering.services.PizzaService;
+import com.pizzaOrdering.services.ShoppingCartService;
 import com.pizzaOrdering.services.UsersService;
 
 @RestController
@@ -39,7 +43,10 @@ public class UserController {
 	@Autowired
 	PizzaService pizzaService;
 	
-
+	@Autowired
+	ShoppingCartService shoppingCartService;
+	
+//user registration => he can be admin, customer, delivery partner
 	
 	//user registration ==> that can be customer, admin,deliveryBoy-----------------------------------------------------
 	@PostMapping("/register")  //go to postman and post new user data in JSON format to register
@@ -61,6 +68,11 @@ public class UserController {
 		return usersService.getAllUsers();
 	}
 	
+	@GetMapping("/user/id/{id}")
+	public Users getUserById(@PathVariable long id) {
+		return usersService.getUsersById(id);
+	}
+	
 	//update/edit user credential 
 	@PutMapping("/edituserscreds")
 	Users updateUser(@RequestBody Users users) {
@@ -74,7 +86,7 @@ public class UserController {
 	}
 	
 	
-//Address------------------------------------------------------
+//Address => user------------------------------------------------------
 	
 	@PostMapping("/address")
 	public Address addAddress(@RequestBody Address address) {
@@ -124,17 +136,48 @@ public class UserController {
 	}
 	
 
-//------------------------------------------------------------------
+//ShoppingCart------------------------------------------------------------------
+	
+	//add to cart
+	@PostMapping("/addtocart")
+	public ShoppingCart addToCart(@RequestParam("user_id") long user_id, @RequestParam("pizza_id") long pizza_id) {
+		return shoppingCartService.addToCart(user_id, pizza_id);
+	}
+	
+	//remove Item from cart
+	@DeleteMapping("/removefromcart")
+	public ShoppingCart removeFromCart(@RequestParam("user_id") long user_id, @RequestParam("pizza_id") long pizza_id) {
+		return shoppingCartService.removeFromCart(user_id, pizza_id);
+	}
 	
 	
+	//checkout
+	@PostMapping("/checkout")
+	public Order checkout(@RequestBody Order order) {
+		return shoppingCartService.checkout(order.getCartOwner().getId(),order.getAddress().getId(), order.getPaymentType(),order.getDiscount(),order.getDeliveryPrice(), order.getTaxAmount());
+	}
+	
+	//getCartByUserId
+	@GetMapping("/carts/user-id/{user_id}")
+	public ShoppingCart getCartByUserId(@PathVariable long user_id) {
+		return shoppingCartService.getCartByUserID(user_id);
+	}
+	
+	//CartItems--------------------------------------------
+	
+	//getCartItemsByCartId
+	@GetMapping("/cartitems/cart-id/{cart_id}")
+	public List<CartItem> getCartItemsByCartId(@PathVariable long cart_id) {
+		return shoppingCartService.getCartItemByCartId(cart_id);
+	}
+	
+	@DeleteMapping("/deletecartitem/id/{id}")
+	public void deleteCartItemById(@PathVariable long id) {
+		shoppingCartService.deleteCartItemByID(id);
+	}
 	
 	
-	
-	
-	
-	
-	
-	
+//Order--------------------------------------------------------
 	
 	
 	
