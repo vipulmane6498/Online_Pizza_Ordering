@@ -24,9 +24,10 @@ private String name;
 	
 	private int discount;
 	
+	private Date valid_from;
+	
 	private Date valid_upto;
 	
-	private Date valid_from;
 	
 	@Column(length = 50, unique = true)
 	private String code;

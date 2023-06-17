@@ -15,9 +15,11 @@ import org.springframework.web.bind.annotation.RestController;
 import com.pizzaOrdering.model.Category;
 import com.pizzaOrdering.model.Offer;
 import com.pizzaOrdering.model.Pizza;
+import com.pizzaOrdering.model.Review;
 import com.pizzaOrdering.services.CategoryService;
 import com.pizzaOrdering.services.OfferService;
 import com.pizzaOrdering.services.PizzaService;
+import com.pizzaOrdering.services.ReviewService;
 
 
 @RestController
@@ -32,6 +34,9 @@ public class AdminController {
 	
 	@Autowired
 	OfferService offerService;
+	
+	@Autowired
+	ReviewService reviewService;
 	
 //Category added by admin---------------------------------------------------------------------------------------------------
 	
@@ -130,7 +135,29 @@ public class AdminController {
 	}
 	
 	
-//------------------------------------------------------------
+//Reviews------------------------------------------------------------
+	
+	//admin can only fetch & delete the reviews
+	//user can =>  add reviews & fetch users review by userID & fetch product review by product ID
+	
+	//get review by id
+	@GetMapping("/review/id/{id}")
+	public Optional<Review> getReview(@PathVariable long id) {
+		return reviewService.getReviewById(id);
+	}
+	
+	//delete review by id
+	@DeleteMapping("/deletereview/id/{id}")
+	public void deleteReview(@PathVariable long id) {
+		 reviewService.deleteReviewById(id);
+	}
+	
+	//get all reviews
+	@GetMapping("/allreviews")
+	public List<Review> getAllReviews(){
+		return reviewService.findAllReviews();
+		}
+	
 	
 	
 	//*******************************************************************

@@ -22,11 +22,13 @@ import com.pizzaOrdering.model.Address;
 import com.pizzaOrdering.model.CartItem;
 import com.pizzaOrdering.model.Order;
 import com.pizzaOrdering.model.Pizza;
+import com.pizzaOrdering.model.Review;
 import com.pizzaOrdering.model.ShoppingCart;
 import com.pizzaOrdering.model.Users;
 import com.pizzaOrdering.services.AddressService;
 import com.pizzaOrdering.services.CategoryService;
 import com.pizzaOrdering.services.PizzaService;
+import com.pizzaOrdering.services.ReviewService;
 import com.pizzaOrdering.services.ShoppingCartService;
 import com.pizzaOrdering.services.UsersService;
 
@@ -45,6 +47,9 @@ public class UserController {
 	
 	@Autowired
 	ShoppingCartService shoppingCartService;
+	
+	@Autowired
+	ReviewService reviewService;
 	
 //user registration => he can be admin, customer, delivery partner
 	
@@ -176,6 +181,65 @@ public class UserController {
 		shoppingCartService.deleteCartItemByID(id);
 	}
 	
+//Review------------------------------------------------------------
+//Order & Review => once you place the order then you are applicable to provide a Review--------------------------------------------------------
 	
-//Order--------------------------------------------------------
+	
+//Order ------
+	
+	
+	
+	
+	
+	
+	
+//Reviews----
+	//admin can only fetch & delete the reviews
+	//user can =>  add reviews & fetch users review by userID & fetch product review by product ID
+
+	//add review
+	@PostMapping("/review")
+	public Review addReview(@RequestBody Review review) {
+		reviewService.addReview(review);
+		return review;
+	}
+	
+	
+	//get user review by user id
+	@GetMapping("/userreviews/id/{id}")
+	public List<Review> getUserReviews(@PathVariable long id) {
+		return reviewService.findReviewByUsersId(id);
+	}
+	
+	//get product review by product id
+	@GetMapping("/productreview/id/{id}")
+	public List<Review> getProductReviews(@PathVariable long id){
+		return reviewService.findReviewByProduct(id);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	}
