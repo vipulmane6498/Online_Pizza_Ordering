@@ -8,7 +8,7 @@ import com.pizzaOrdering.model.ShoppingCart;
 
 public interface ShoppingCartDao extends JpaRepository<ShoppingCart, Long> {
 
-	ShoppingCart findByCartOwnerId(long user_id);
+	ShoppingCart findByCartOwnerId(long id);
 
 	
 	

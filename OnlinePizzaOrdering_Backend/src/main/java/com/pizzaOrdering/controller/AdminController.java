@@ -13,8 +13,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.pizzaOrdering.model.Category;
+import com.pizzaOrdering.model.Offer;
 import com.pizzaOrdering.model.Pizza;
 import com.pizzaOrdering.services.CategoryService;
+import com.pizzaOrdering.services.OfferService;
 import com.pizzaOrdering.services.PizzaService;
 
 
@@ -27,6 +29,9 @@ public class AdminController {
 	
 	@Autowired
 	PizzaService pizzaService;
+	
+	@Autowired
+	OfferService offerService;
 	
 //Category added by admin---------------------------------------------------------------------------------------------------
 	
@@ -65,7 +70,7 @@ public class AdminController {
 	}
 	
 	
-//Pizza handle by admin---------------------------------------------------
+//Pizza =>  handle by admin---------------------------------------------------
 	
 	//Add Pizza by admin
 	@PostMapping("/addpizza")
@@ -87,6 +92,47 @@ public class AdminController {
 	}
 	
 	
+
+	
+//Offer*******************************************************************
+	
+	//add Offer
+	@PostMapping("/addoffer")
+	public Offer addOffer(@RequestBody Offer offer) {
+		offerService.addOffer(offer);
+		return offer;
+	}
+	
+	//get offer by id
+	@GetMapping("/offer/id/{id}")
+	public Optional<Offer> getOfferById(@PathVariable long id) {
+		return offerService.findOfferById(id);
+	}
+	
+	//get all offers
+	@GetMapping("/showalloffers")
+	public List<Offer> getAllOffers() {
+		return offerService.findAllOffers();
+	}
+	
+	
+	//edit offer
+	@PutMapping("/editoffer")
+	public Offer editOffer(@RequestBody Offer offer) {
+		System.out.println(offer);
+		return offerService.updateOffer(offer);
+	}
+	
+	//delete offer
+	@DeleteMapping("/deleteoffer/id/{id}")
+	public void deleteOfferById(@PathVariable long id) {
+		offerService.deleteOfferById(id);
+	}
+	
+	
+//------------------------------------------------------------
+	
+	
 	//*******************************************************************
 //	//Deleting users pizza if order is mistakenly placed
 //	@DeleteMapping("/pizza/order/deleteorder/id/{id}")
@@ -94,21 +140,6 @@ public class AdminController {
 //		orderService.deleteorderById(id);
 //	}
 //	
-	
-	//*******************************************************************
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	

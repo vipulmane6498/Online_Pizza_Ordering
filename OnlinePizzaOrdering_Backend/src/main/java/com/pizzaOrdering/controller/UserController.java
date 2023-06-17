@@ -140,14 +140,14 @@ public class UserController {
 	
 	//add to cart
 	@PostMapping("/addtocart")
-	public ShoppingCart addToCart(@RequestParam("user_id") long user_id, @RequestParam("pizza_id") long pizza_id) {
-		return shoppingCartService.addToCart(user_id, pizza_id);
+	public ShoppingCart addToCart(@RequestParam("userId") long userId, @RequestParam("pizzaId") long pizzaId) {
+		return shoppingCartService.addToCart(userId, pizzaId);
 	}
 	
 	//remove Item from cart
 	@DeleteMapping("/removefromcart")
-	public ShoppingCart removeFromCart(@RequestParam("user_id") long user_id, @RequestParam("pizza_id") long pizza_id) {
-		return shoppingCartService.removeFromCart(user_id, pizza_id);
+	public ShoppingCart removeFromCart(@RequestParam("userId") long userId, @RequestParam("pizzaId") long pizzaId) {
+		return shoppingCartService.removeFromCart(userId, pizzaId);
 	}
 	
 	
@@ -166,7 +166,7 @@ public class UserController {
 	//CartItems--------------------------------------------
 	
 	//getCartItemsByCartId
-	@GetMapping("/cartitems/cart-id/{cart_id}")
+	@GetMapping("/cartitems/cartId/{cart_id}")
 	public List<CartItem> getCartItemsByCartId(@PathVariable long cart_id) {
 		return shoppingCartService.getCartItemByCartId(cart_id);
 	}
@@ -178,16 +178,4 @@ public class UserController {
 	
 	
 //Order--------------------------------------------------------
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-}
+	}

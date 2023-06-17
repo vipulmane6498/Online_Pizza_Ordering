@@ -12,8 +12,8 @@ public interface ShoppingCartService {
 //ShoppingCart-----------------------------------------------------
 
 	//addCartToUser => when user create an account single Cart will be automatically added to his account then he can do CRUD ops.
-	public ShoppingCart addCartToUser(Users users);
-	
+//	public ShoppingCart addCartToUser(Users users); //this method is added in userServiceImpl
+//	
 	//add to cart
 	public ShoppingCart addToCart(long user_id, long pizza_id);
 	

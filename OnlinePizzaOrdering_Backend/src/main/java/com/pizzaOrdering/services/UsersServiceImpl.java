@@ -6,8 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.pizzaOrdering.dao.ShoppingCartDao;
 import com.pizzaOrdering.dao.UsersDao;
 import com.pizzaOrdering.exception.ResourceNotFoundException;
+import com.pizzaOrdering.model.ShoppingCart;
 import com.pizzaOrdering.model.Users;
 
 
@@ -18,12 +20,24 @@ public class UsersServiceImpl implements UsersService {
 	@Autowired
 	UsersDao usersDao;
 	
+	@Autowired
+	ShoppingCartDao shoppingCartDao;
+	
+	//addCartToUser => when user created an account single Cart will be automatically added to his account then he can do CRUD ops.
+	public ShoppingCart addCartToUser(Users users) {
+		ShoppingCart cart=new ShoppingCart();
+		cart.setCartOwner(users);
+		shoppingCartDao.save(cart);
+		return cart;
+	}
 	
 	
 	//POST => add new user(registration)
 	@Override
 	public Users addUsers(Users users) {
-		return usersDao.save(users);
+		Users savedUser = usersDao.save(users);
+		addCartToUser(savedUser); //when account created, cart will added to userAccount
+		return savedUser;
 	}
 
 	//POST  => login

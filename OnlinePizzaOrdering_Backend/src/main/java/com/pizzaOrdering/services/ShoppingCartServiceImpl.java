@@ -52,14 +52,6 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
 //Cart(addCartToUser, addToCart, udateCart, removeFromCart,DeleteCart, getCartByUserID)--------------------------------------------------------------
 	
 	
-	//addCartToUser => when user create an account single Cart will be automatically added to his account then he can do CRUD ops.
-	public ShoppingCart addCartToUser(Users users) {
-		ShoppingCart cart=new ShoppingCart();
-		cart.setCartOwner(users);
-		shoppingCartDao.save(cart);
-		return cart;
-	}
-	
 	//add to cart
 	public ShoppingCart addToCart(long user_id, long pizza_id) {
 		//get/select pizza by id
@@ -67,6 +59,7 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
 		System.out.println("Got Pizza: "+pizza);
 		
 		//Get Cart by owner id
+		System.out.println("User id"+user_id);
 		ShoppingCart cart=shoppingCartDao.findByCartOwnerId(user_id);
 		System.out.println("Got cart: "+cart);
 		
