@@ -35,7 +35,7 @@ public class Order extends BaseEntity {
 	
 	@CreationTimestamp // hib annotation to add creation date auto : once @ time of saving the entity
 	@Column(name = "created_on")
-	private LocalDate orderOreatedOn;
+	private LocalDate orderCreatedOn;
 	
 	// Cart HAS-A Customer Cart ----> User
 	// Cart : one , child , owning

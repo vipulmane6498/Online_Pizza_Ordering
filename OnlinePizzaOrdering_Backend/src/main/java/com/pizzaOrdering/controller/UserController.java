@@ -2,6 +2,7 @@ package com.pizzaOrdering.controller;
 
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,16 +18,19 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.pizzaOrdering.dao.OrderItemDao;
 import com.pizzaOrdering.exception.ResourceNotFoundException;
 import com.pizzaOrdering.model.Address;
 import com.pizzaOrdering.model.CartItem;
 import com.pizzaOrdering.model.Order;
+import com.pizzaOrdering.model.OrderItem;
 import com.pizzaOrdering.model.Pizza;
 import com.pizzaOrdering.model.Review;
 import com.pizzaOrdering.model.ShoppingCart;
 import com.pizzaOrdering.model.Users;
 import com.pizzaOrdering.services.AddressService;
 import com.pizzaOrdering.services.CategoryService;
+import com.pizzaOrdering.services.OrderService;
 import com.pizzaOrdering.services.PizzaService;
 import com.pizzaOrdering.services.ReviewService;
 import com.pizzaOrdering.services.ShoppingCartService;
@@ -50,6 +54,12 @@ public class UserController {
 	
 	@Autowired
 	ReviewService reviewService;
+	
+	@Autowired
+	OrderService orderService;
+	
+	@Autowired
+	OrderItemDao orderItemDao;
 	
 //user registration => he can be admin, customer, delivery partner
 	
@@ -187,13 +197,34 @@ public class UserController {
 	
 //Order ------
 	
+	//add order
+	@PostMapping("/placeorder")
+	public Order addOrder(@RequestBody Order order) {
+		return orderService.addOrder(order);
+	}
 	
+	//get order by orderID
+	@GetMapping("/order/id/{id}")
+	public Optional<Order> getOrderById(@PathVariable long id) {
+		return orderService.findOrderById(id);
+	}
 	
+	//get order by userID
+	@GetMapping("/orderbyuser/id/{id}")
+	public Order getorderByUserId(@PathVariable long id) {
+		return orderService.findOrderByUserId(id);
+	}
 	
+	//find orderItem by orderID
+	@GetMapping("/orderitembyorder/id/{id}")
+	public Order findOrderItemsByOrder(@PathVariable long id) {
+		return orderItemDao.findByOrderId(id);
+	}
 	
 	
 	
 //Reviews----
+	
 	//admin can only fetch & delete the reviews
 	//user can =>  add reviews & fetch users review by userID & fetch product review by product ID
 
@@ -203,7 +234,6 @@ public class UserController {
 		reviewService.addReview(review);
 		return review;
 	}
-	
 	
 	//get user review by user id
 	@GetMapping("/userreviews/id/{id}")
@@ -216,30 +246,6 @@ public class UserController {
 	public List<Review> getProductReviews(@PathVariable long id){
 		return reviewService.findReviewByProduct(id);
 	}
+
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	}
+}

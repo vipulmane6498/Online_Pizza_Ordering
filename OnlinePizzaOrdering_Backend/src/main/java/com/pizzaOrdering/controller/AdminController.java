@@ -14,10 +14,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.pizzaOrdering.model.Category;
 import com.pizzaOrdering.model.Offer;
+import com.pizzaOrdering.model.Order;
 import com.pizzaOrdering.model.Pizza;
 import com.pizzaOrdering.model.Review;
 import com.pizzaOrdering.services.CategoryService;
 import com.pizzaOrdering.services.OfferService;
+import com.pizzaOrdering.services.OrderService;
 import com.pizzaOrdering.services.PizzaService;
 import com.pizzaOrdering.services.ReviewService;
 
@@ -37,6 +39,10 @@ public class AdminController {
 	
 	@Autowired
 	ReviewService reviewService;
+	
+	
+	@Autowired 
+	OrderService orderService;
 	
 //Category added by admin---------------------------------------------------------------------------------------------------
 	
@@ -135,6 +141,27 @@ public class AdminController {
 	}
 	
 	
+//Order*******************************************************************
+	
+	//show all Orders
+	@PutMapping("/orders")
+	public List<Order> seeAllOrders() {
+		return orderService.findAllOrders();
+	}
+	
+	//edit order=> this is not required once the order has been plcaed order can't be changed 
+	@PutMapping("/order/editorder")
+	public Order editOrder(@RequestBody Order order) {
+		return orderService.updateOrder(order);
+	}
+		
+	//Deleting users pizza order=> if order is mistakenly placed
+	@DeleteMapping("/order/deleteorder/id/{id}")
+	public void deleteOrderById(@PathVariable long id) {
+		orderService.deleteOrderById(id);
+	}
+	
+	
 //Reviews------------------------------------------------------------
 	
 	//admin can only fetch & delete the reviews
@@ -156,17 +183,10 @@ public class AdminController {
 	@GetMapping("/allreviews")
 	public List<Review> getAllReviews(){
 		return reviewService.findAllReviews();
-		}
+	}
 	
 	
 	
-	//*******************************************************************
-//	//Deleting users pizza if order is mistakenly placed
-//	@DeleteMapping("/pizza/order/deleteorder/id/{id}")
-//	public void deleteOrderById(@PathVariable long id) {
-//		orderService.deleteorderById(id);
-//	}
-//	
 	
 	
 	
