@@ -24,7 +24,7 @@ import lombok.ToString;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString(exclude = {"cartOwner","cartItems"})
+@ToString
 @Entity
 public class ShoppingCart extends BaseEntity{
 	//totalItems,totalCartPrice,createdOn,updatedOn

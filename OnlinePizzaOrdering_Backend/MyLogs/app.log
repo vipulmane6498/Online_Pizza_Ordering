@@ -1,0 +1,321 @@
+18-06-2023 16:24:58 [restartedMain] INFO  c.p.OnlinePizzaOrderingBackendApplication -Starting OnlinePizzaOrderingBackendApplication using Java 17.0.6 on jkhj with PID 13704 (D:\Vipul\CDAC  Cource_DATA_Jaipur NETCOM\Food delivery Project data\Online_Pizza_Ordering\OnlinePizzaOrdering_Backend\target\classes started by HP in D:\Vipul\CDAC  Cource_DATA_Jaipur NETCOM\Food delivery Project data\Online_Pizza_Ordering\OnlinePizzaOrdering_Backend)
+18-06-2023 16:24:58 [restartedMain] INFO  c.p.OnlinePizzaOrderingBackendApplication -No active profile set, falling back to 1 default profile: "default"
+18-06-2023 16:24:58 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+18-06-2023 16:24:58 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 15 ms. Found 10 JPA repository interfaces.
+18-06-2023 16:24:58 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat initialized with port(s): 8080 (http)
+18-06-2023 16:24:58 [restartedMain] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+18-06-2023 16:24:58 [restartedMain] INFO  o.a.catalina.core.StandardEngine -Starting Servlet engine: [Apache Tomcat/9.0.74]
+18-06-2023 16:24:58 [restartedMain] INFO  o.a.c.c.C.[.[.[/pizzaordering] -Initializing Spring embedded WebApplicationContext
+18-06-2023 16:24:58 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -Root WebApplicationContext: initialization completed in 281 ms
+18-06-2023 16:24:58 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper -HHH000204: Processing PersistenceUnitInfo [name: default]
+18-06-2023 16:24:58 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-9 - Starting...
+18-06-2023 16:24:58 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-9 - Start completed.
+18-06-2023 16:24:58 [restartedMain] INFO  org.hibernate.dialect.Dialect -HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+18-06-2023 16:24:58 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+18-06-2023 16:24:58 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Initialized JPA EntityManagerFactory for persistence unit 'default'
+18-06-2023 16:24:58 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+18-06-2023 16:24:58 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer -LiveReload server is running on port 35729
+18-06-2023 16:24:58 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat started on port(s): 8080 (http) with context path '/pizzaordering'
+18-06-2023 16:24:58 [restartedMain] INFO  c.p.OnlinePizzaOrderingBackendApplication -Started OnlinePizzaOrderingBackendApplication in 0.834 seconds (JVM running for 1574.496)
+18-06-2023 16:24:58 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener -Condition evaluation unchanged
+18-06-2023 16:24:58 [restartedMain] INFO  c.pizzaOrdering.config.LoggerConfig -This is an informational message
+18-06-2023 16:24:58 [restartedMain] ERROR c.pizzaOrdering.config.LoggerConfig -This is an error message
+18-06-2023 16:24:58 [restartedMain] WARN  c.pizzaOrdering.config.LoggerConfig -This is warning message
+18-06-2023 16:24:58 [RMI TCP Connection(29)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin -Application shutdown requested.
+18-06-2023 16:24:58 [RMI TCP Connection(29)-127.0.0.1] INFO  o.a.catalina.core.StandardService -Stopping service [Tomcat]
+18-06-2023 16:24:58 [RMI TCP Connection(29)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
+18-06-2023 16:24:58 [RMI TCP Connection(29)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-9 - Shutdown initiated...
+18-06-2023 16:24:58 [RMI TCP Connection(29)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-9 - Shutdown completed.
+18-06-2023 16:25:00 [restartedMain] INFO  c.p.OnlinePizzaOrderingBackendApplication -Starting OnlinePizzaOrderingBackendApplication using Java 17.0.6 on jkhj with PID 16192 (D:\Vipul\CDAC  Cource_DATA_Jaipur NETCOM\Food delivery Project data\Online_Pizza_Ordering\OnlinePizzaOrdering_Backend\target\classes started by HP in D:\Vipul\CDAC  Cource_DATA_Jaipur NETCOM\Food delivery Project data\Online_Pizza_Ordering\OnlinePizzaOrdering_Backend)
+18-06-2023 16:25:00 [restartedMain] INFO  c.p.OnlinePizzaOrderingBackendApplication -No active profile set, falling back to 1 default profile: "default"
+18-06-2023 16:25:00 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor -Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+18-06-2023 16:25:00 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor -For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+18-06-2023 16:25:01 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+18-06-2023 16:25:01 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 44 ms. Found 10 JPA repository interfaces.
+18-06-2023 16:25:01 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat initialized with port(s): 8080 (http)
+18-06-2023 16:25:01 [restartedMain] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+18-06-2023 16:25:01 [restartedMain] INFO  o.a.catalina.core.StandardEngine -Starting Servlet engine: [Apache Tomcat/9.0.74]
+18-06-2023 16:25:01 [restartedMain] INFO  o.a.c.c.C.[.[.[/pizzaordering] -Initializing Spring embedded WebApplicationContext
+18-06-2023 16:25:01 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -Root WebApplicationContext: initialization completed in 1115 ms
+18-06-2023 16:25:02 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper -HHH000204: Processing PersistenceUnitInfo [name: default]
+18-06-2023 16:25:02 [restartedMain] INFO  org.hibernate.Version -HHH000412: Hibernate ORM core version 5.6.15.Final
+18-06-2023 16:25:02 [restartedMain] INFO  o.h.annotations.common.Version -HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+18-06-2023 16:25:02 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-1 - Starting...
+18-06-2023 16:25:02 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-1 - Start completed.
+18-06-2023 16:25:02 [restartedMain] INFO  org.hibernate.dialect.Dialect -HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+18-06-2023 16:25:03 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+18-06-2023 16:25:03 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Initialized JPA EntityManagerFactory for persistence unit 'default'
+18-06-2023 16:25:03 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+18-06-2023 16:25:03 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer -LiveReload server is running on port 35729
+18-06-2023 16:25:03 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat started on port(s): 8080 (http) with context path '/pizzaordering'
+18-06-2023 16:25:04 [restartedMain] INFO  c.p.OnlinePizzaOrderingBackendApplication -Started OnlinePizzaOrderingBackendApplication in 3.682 seconds (JVM running for 4.22)
+18-06-2023 16:25:04 [restartedMain] INFO  c.pizzaOrdering.config.LoggerConfig -This is an informational message
+18-06-2023 16:25:04 [restartedMain] ERROR c.pizzaOrdering.config.LoggerConfig -This is an error message
+18-06-2023 16:25:04 [restartedMain] WARN  c.pizzaOrdering.config.LoggerConfig -This is warning message
+18-06-2023 16:29:11 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener -Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+18-06-2023 16:29:11 [Thread-4] INFO  o.a.catalina.core.StandardService -Stopping service [Tomcat]
+18-06-2023 16:29:11 [Thread-4] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
+18-06-2023 16:29:11 [Thread-4] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-1 - Shutdown initiated...
+18-06-2023 16:29:11 [Thread-4] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-1 - Shutdown completed.
+18-06-2023 16:29:11 [restartedMain] INFO  c.p.OnlinePizzaOrderingBackendApplication -Starting OnlinePizzaOrderingBackendApplication using Java 17.0.6 on jkhj with PID 16192 (D:\Vipul\CDAC  Cource_DATA_Jaipur NETCOM\Food delivery Project data\Online_Pizza_Ordering\OnlinePizzaOrdering_Backend\target\classes started by HP in D:\Vipul\CDAC  Cource_DATA_Jaipur NETCOM\Food delivery Project data\Online_Pizza_Ordering\OnlinePizzaOrdering_Backend)
+18-06-2023 16:29:11 [restartedMain] INFO  c.p.OnlinePizzaOrderingBackendApplication -No active profile set, falling back to 1 default profile: "default"
+18-06-2023 16:29:11 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+18-06-2023 16:29:11 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 15 ms. Found 10 JPA repository interfaces.
+18-06-2023 16:29:11 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat initialized with port(s): 8080 (http)
+18-06-2023 16:29:11 [restartedMain] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+18-06-2023 16:29:11 [restartedMain] INFO  o.a.catalina.core.StandardEngine -Starting Servlet engine: [Apache Tomcat/9.0.74]
+18-06-2023 16:29:11 [restartedMain] INFO  o.a.c.c.C.[.[.[/pizzaordering] -Initializing Spring embedded WebApplicationContext
+18-06-2023 16:29:11 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -Root WebApplicationContext: initialization completed in 263 ms
+18-06-2023 16:29:11 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper -HHH000204: Processing PersistenceUnitInfo [name: default]
+18-06-2023 16:29:11 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-2 - Starting...
+18-06-2023 16:29:11 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-2 - Start completed.
+18-06-2023 16:29:11 [restartedMain] INFO  org.hibernate.dialect.Dialect -HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+18-06-2023 16:29:11 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+18-06-2023 16:29:11 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Initialized JPA EntityManagerFactory for persistence unit 'default'
+18-06-2023 16:29:11 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+18-06-2023 16:29:11 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer -LiveReload server is running on port 35729
+18-06-2023 16:29:11 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat started on port(s): 8080 (http) with context path '/pizzaordering'
+18-06-2023 16:29:12 [restartedMain] INFO  c.p.OnlinePizzaOrderingBackendApplication -Started OnlinePizzaOrderingBackendApplication in 0.912 seconds (JVM running for 251.996)
+18-06-2023 16:29:12 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener -Condition evaluation unchanged
+18-06-2023 16:29:12 [restartedMain] INFO  c.pizzaOrdering.config.LoggerConfig -This is an informational message
+18-06-2023 16:29:12 [restartedMain] ERROR c.pizzaOrdering.config.LoggerConfig -This is an error message
+18-06-2023 16:29:12 [restartedMain] WARN  c.pizzaOrdering.config.LoggerConfig -This is warning message
+18-06-2023 16:31:02 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener -Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+18-06-2023 16:31:02 [Thread-7] INFO  o.a.catalina.core.StandardService -Stopping service [Tomcat]
+18-06-2023 16:31:02 [Thread-7] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
+18-06-2023 16:31:02 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-2 - Shutdown initiated...
+18-06-2023 16:31:02 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-2 - Shutdown completed.
+18-06-2023 16:31:02 [restartedMain] INFO  c.p.OnlinePizzaOrderingBackendApplication -Starting OnlinePizzaOrderingBackendApplication using Java 17.0.6 on jkhj with PID 16192 (D:\Vipul\CDAC  Cource_DATA_Jaipur NETCOM\Food delivery Project data\Online_Pizza_Ordering\OnlinePizzaOrdering_Backend\target\classes started by HP in D:\Vipul\CDAC  Cource_DATA_Jaipur NETCOM\Food delivery Project data\Online_Pizza_Ordering\OnlinePizzaOrdering_Backend)
+18-06-2023 16:31:02 [restartedMain] INFO  c.p.OnlinePizzaOrderingBackendApplication -No active profile set, falling back to 1 default profile: "default"
+18-06-2023 16:31:02 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+18-06-2023 16:31:02 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 18 ms. Found 10 JPA repository interfaces.
+18-06-2023 16:31:02 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat initialized with port(s): 8080 (http)
+18-06-2023 16:31:02 [restartedMain] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+18-06-2023 16:31:02 [restartedMain] INFO  o.a.catalina.core.StandardEngine -Starting Servlet engine: [Apache Tomcat/9.0.74]
+18-06-2023 16:31:02 [restartedMain] INFO  o.a.c.c.C.[.[.[/pizzaordering] -Initializing Spring embedded WebApplicationContext
+18-06-2023 16:31:02 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -Root WebApplicationContext: initialization completed in 248 ms
+18-06-2023 16:31:02 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper -HHH000204: Processing PersistenceUnitInfo [name: default]
+18-06-2023 16:31:02 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-3 - Starting...
+18-06-2023 16:31:02 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-3 - Start completed.
+18-06-2023 16:31:02 [restartedMain] INFO  org.hibernate.dialect.Dialect -HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+18-06-2023 16:31:02 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+18-06-2023 16:31:02 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Initialized JPA EntityManagerFactory for persistence unit 'default'
+18-06-2023 16:31:02 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+18-06-2023 16:31:02 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer -LiveReload server is running on port 35729
+18-06-2023 16:31:02 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat started on port(s): 8080 (http) with context path '/pizzaordering'
+18-06-2023 16:31:03 [restartedMain] INFO  c.p.OnlinePizzaOrderingBackendApplication -Started OnlinePizzaOrderingBackendApplication in 0.823 seconds (JVM running for 362.999)
+18-06-2023 16:31:03 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener -Condition evaluation unchanged
+18-06-2023 16:31:03 [restartedMain] INFO  c.pizzaOrdering.config.LoggerConfig -This is an informational message
+18-06-2023 16:31:03 [restartedMain] ERROR c.pizzaOrdering.config.LoggerConfig -This is an error message
+18-06-2023 16:31:03 [restartedMain] WARN  c.pizzaOrdering.config.LoggerConfig -This is warning message
+18-06-2023 16:32:50 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener -Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+18-06-2023 16:32:50 [Thread-11] INFO  o.a.catalina.core.StandardService -Stopping service [Tomcat]
+18-06-2023 16:32:50 [Thread-11] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
+18-06-2023 16:32:50 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-3 - Shutdown initiated...
+18-06-2023 16:32:50 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-3 - Shutdown completed.
+18-06-2023 16:32:50 [restartedMain] INFO  c.p.OnlinePizzaOrderingBackendApplication -Starting OnlinePizzaOrderingBackendApplication using Java 17.0.6 on jkhj with PID 16192 (D:\Vipul\CDAC  Cource_DATA_Jaipur NETCOM\Food delivery Project data\Online_Pizza_Ordering\OnlinePizzaOrdering_Backend\target\classes started by HP in D:\Vipul\CDAC  Cource_DATA_Jaipur NETCOM\Food delivery Project data\Online_Pizza_Ordering\OnlinePizzaOrdering_Backend)
+18-06-2023 16:32:50 [restartedMain] INFO  c.p.OnlinePizzaOrderingBackendApplication -No active profile set, falling back to 1 default profile: "default"
+18-06-2023 16:32:50 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+18-06-2023 16:32:50 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 17 ms. Found 10 JPA repository interfaces.
+18-06-2023 16:32:50 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat initialized with port(s): 8080 (http)
+18-06-2023 16:32:50 [restartedMain] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+18-06-2023 16:32:50 [restartedMain] INFO  o.a.catalina.core.StandardEngine -Starting Servlet engine: [Apache Tomcat/9.0.74]
+18-06-2023 16:32:50 [restartedMain] INFO  o.a.c.c.C.[.[.[/pizzaordering] -Initializing Spring embedded WebApplicationContext
+18-06-2023 16:32:50 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -Root WebApplicationContext: initialization completed in 228 ms
+18-06-2023 16:32:50 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper -HHH000204: Processing PersistenceUnitInfo [name: default]
+18-06-2023 16:32:50 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-4 - Starting...
+18-06-2023 16:32:50 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-4 - Start completed.
+18-06-2023 16:32:50 [restartedMain] INFO  org.hibernate.dialect.Dialect -HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+18-06-2023 16:32:50 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+18-06-2023 16:32:50 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Initialized JPA EntityManagerFactory for persistence unit 'default'
+18-06-2023 16:32:50 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+18-06-2023 16:32:50 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer -LiveReload server is running on port 35729
+18-06-2023 16:32:51 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat started on port(s): 8080 (http) with context path '/pizzaordering'
+18-06-2023 16:32:51 [restartedMain] INFO  c.p.OnlinePizzaOrderingBackendApplication -Started OnlinePizzaOrderingBackendApplication in 0.818 seconds (JVM running for 471.073)
+18-06-2023 16:32:51 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener -Condition evaluation unchanged
+18-06-2023 16:32:51 [restartedMain] INFO  c.pizzaOrdering.config.LoggerConfig -This is an informational message
+18-06-2023 16:32:51 [restartedMain] ERROR c.pizzaOrdering.config.LoggerConfig -This is an error message
+18-06-2023 16:32:51 [restartedMain] WARN  c.pizzaOrdering.config.LoggerConfig -This is warning message
+18-06-2023 16:35:06 [RMI TCP Connection(12)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin -Application shutdown requested.
+18-06-2023 16:35:06 [RMI TCP Connection(12)-127.0.0.1] INFO  o.a.catalina.core.StandardService -Stopping service [Tomcat]
+18-06-2023 16:35:06 [RMI TCP Connection(12)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
+18-06-2023 16:35:06 [RMI TCP Connection(12)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-4 - Shutdown initiated...
+18-06-2023 16:35:06 [RMI TCP Connection(12)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-4 - Shutdown completed.
+18-06-2023 16:35:17 [restartedMain] INFO  c.p.OnlinePizzaOrderingBackendApplication -Starting OnlinePizzaOrderingBackendApplication using Java 17.0.6 on jkhj with PID 7964 (D:\Vipul\CDAC  Cource_DATA_Jaipur NETCOM\Food delivery Project data\Online_Pizza_Ordering\OnlinePizzaOrdering_Backend\target\classes started by HP in D:\Vipul\CDAC  Cource_DATA_Jaipur NETCOM\Food delivery Project data\Online_Pizza_Ordering\OnlinePizzaOrdering_Backend)
+18-06-2023 16:35:17 [restartedMain] INFO  c.p.OnlinePizzaOrderingBackendApplication -No active profile set, falling back to 1 default profile: "default"
+18-06-2023 16:35:17 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor -Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+18-06-2023 16:35:17 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor -For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+18-06-2023 16:35:18 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+18-06-2023 16:35:18 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 46 ms. Found 10 JPA repository interfaces.
+18-06-2023 16:35:18 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat initialized with port(s): 8080 (http)
+18-06-2023 16:35:18 [restartedMain] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+18-06-2023 16:35:18 [restartedMain] INFO  o.a.catalina.core.StandardEngine -Starting Servlet engine: [Apache Tomcat/9.0.74]
+18-06-2023 16:35:18 [restartedMain] INFO  o.a.c.c.C.[.[.[/pizzaordering] -Initializing Spring embedded WebApplicationContext
+18-06-2023 16:35:18 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -Root WebApplicationContext: initialization completed in 1089 ms
+18-06-2023 16:35:18 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper -HHH000204: Processing PersistenceUnitInfo [name: default]
+18-06-2023 16:35:18 [restartedMain] INFO  org.hibernate.Version -HHH000412: Hibernate ORM core version 5.6.15.Final
+18-06-2023 16:35:18 [restartedMain] INFO  o.h.annotations.common.Version -HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+18-06-2023 16:35:18 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-1 - Starting...
+18-06-2023 16:35:19 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-1 - Start completed.
+18-06-2023 16:35:19 [restartedMain] INFO  org.hibernate.dialect.Dialect -HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+18-06-2023 16:35:19 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+18-06-2023 16:35:19 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Initialized JPA EntityManagerFactory for persistence unit 'default'
+18-06-2023 16:35:20 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+18-06-2023 16:35:20 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer -LiveReload server is running on port 35729
+18-06-2023 16:35:20 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat started on port(s): 8080 (http) with context path '/pizzaordering'
+18-06-2023 16:35:20 [restartedMain] INFO  c.p.OnlinePizzaOrderingBackendApplication -Started OnlinePizzaOrderingBackendApplication in 3.414 seconds (JVM running for 3.916)
+18-06-2023 16:35:20 [restartedMain] INFO  c.pizzaOrdering.config.LoggerConfig -This is an informational message
+18-06-2023 16:35:20 [restartedMain] ERROR c.pizzaOrdering.config.LoggerConfig -This is an error message
+18-06-2023 16:35:20 [restartedMain] WARN  c.pizzaOrdering.config.LoggerConfig -This is warning message
+18-06-2023 16:37:54 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener -Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+18-06-2023 16:37:54 [Thread-4] INFO  o.a.catalina.core.StandardService -Stopping service [Tomcat]
+18-06-2023 16:37:54 [Thread-4] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
+18-06-2023 16:37:54 [Thread-4] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-1 - Shutdown initiated...
+18-06-2023 16:37:54 [Thread-4] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-1 - Shutdown completed.
+18-06-2023 16:37:54 [restartedMain] INFO  c.p.OnlinePizzaOrderingBackendApplication -Starting OnlinePizzaOrderingBackendApplication using Java 17.0.6 on jkhj with PID 7964 (D:\Vipul\CDAC  Cource_DATA_Jaipur NETCOM\Food delivery Project data\Online_Pizza_Ordering\OnlinePizzaOrdering_Backend\target\classes started by HP in D:\Vipul\CDAC  Cource_DATA_Jaipur NETCOM\Food delivery Project data\Online_Pizza_Ordering\OnlinePizzaOrdering_Backend)
+18-06-2023 16:37:54 [restartedMain] INFO  c.p.OnlinePizzaOrderingBackendApplication -No active profile set, falling back to 1 default profile: "default"
+18-06-2023 16:37:55 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+18-06-2023 16:37:55 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 22 ms. Found 10 JPA repository interfaces.
+18-06-2023 16:37:55 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat initialized with port(s): 8080 (http)
+18-06-2023 16:37:55 [restartedMain] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+18-06-2023 16:37:55 [restartedMain] INFO  o.a.catalina.core.StandardEngine -Starting Servlet engine: [Apache Tomcat/9.0.74]
+18-06-2023 16:37:55 [restartedMain] INFO  o.a.c.c.C.[.[.[/pizzaordering] -Initializing Spring embedded WebApplicationContext
+18-06-2023 16:37:55 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -Root WebApplicationContext: initialization completed in 434 ms
+18-06-2023 16:37:55 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper -HHH000204: Processing PersistenceUnitInfo [name: default]
+18-06-2023 16:37:55 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-2 - Starting...
+18-06-2023 16:37:55 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-2 - Start completed.
+18-06-2023 16:37:55 [restartedMain] INFO  org.hibernate.dialect.Dialect -HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+18-06-2023 16:37:55 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+18-06-2023 16:37:55 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Initialized JPA EntityManagerFactory for persistence unit 'default'
+18-06-2023 16:37:55 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+18-06-2023 16:37:56 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer -LiveReload server is running on port 35729
+18-06-2023 16:37:56 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat started on port(s): 8080 (http) with context path '/pizzaordering'
+18-06-2023 16:37:56 [restartedMain] INFO  c.p.OnlinePizzaOrderingBackendApplication -Started OnlinePizzaOrderingBackendApplication in 1.33 seconds (JVM running for 159.378)
+18-06-2023 16:37:56 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener -Condition evaluation unchanged
+18-06-2023 16:37:56 [restartedMain] INFO  c.pizzaOrdering.config.LoggerConfig -This is an informational message
+18-06-2023 16:37:56 [restartedMain] ERROR c.pizzaOrdering.config.LoggerConfig -This is an error message
+18-06-2023 16:37:56 [restartedMain] WARN  c.pizzaOrdering.config.LoggerConfig -This is warning message
+18-06-2023 16:39:39 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener -Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+18-06-2023 16:39:39 [Thread-7] INFO  o.a.catalina.core.StandardService -Stopping service [Tomcat]
+18-06-2023 16:39:39 [Thread-7] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
+18-06-2023 16:39:39 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-2 - Shutdown initiated...
+18-06-2023 16:39:39 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-2 - Shutdown completed.
+18-06-2023 16:39:39 [restartedMain] INFO  c.p.OnlinePizzaOrderingBackendApplication -Starting OnlinePizzaOrderingBackendApplication using Java 17.0.6 on jkhj with PID 7964 (D:\Vipul\CDAC  Cource_DATA_Jaipur NETCOM\Food delivery Project data\Online_Pizza_Ordering\OnlinePizzaOrdering_Backend\target\classes started by HP in D:\Vipul\CDAC  Cource_DATA_Jaipur NETCOM\Food delivery Project data\Online_Pizza_Ordering\OnlinePizzaOrdering_Backend)
+18-06-2023 16:39:39 [restartedMain] INFO  c.p.OnlinePizzaOrderingBackendApplication -No active profile set, falling back to 1 default profile: "default"
+18-06-2023 16:39:39 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+18-06-2023 16:39:39 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 14 ms. Found 10 JPA repository interfaces.
+18-06-2023 16:39:39 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat initialized with port(s): 8080 (http)
+18-06-2023 16:39:39 [restartedMain] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+18-06-2023 16:39:39 [restartedMain] INFO  o.a.catalina.core.StandardEngine -Starting Servlet engine: [Apache Tomcat/9.0.74]
+18-06-2023 16:39:39 [restartedMain] INFO  o.a.c.c.C.[.[.[/pizzaordering] -Initializing Spring embedded WebApplicationContext
+18-06-2023 16:39:39 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -Root WebApplicationContext: initialization completed in 213 ms
+18-06-2023 16:39:39 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper -HHH000204: Processing PersistenceUnitInfo [name: default]
+18-06-2023 16:39:39 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-3 - Starting...
+18-06-2023 16:39:39 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-3 - Start completed.
+18-06-2023 16:39:39 [restartedMain] INFO  org.hibernate.dialect.Dialect -HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+18-06-2023 16:39:40 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+18-06-2023 16:39:40 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Initialized JPA EntityManagerFactory for persistence unit 'default'
+18-06-2023 16:39:40 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+18-06-2023 16:39:40 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer -LiveReload server is running on port 35729
+18-06-2023 16:39:40 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat started on port(s): 8080 (http) with context path '/pizzaordering'
+18-06-2023 16:39:40 [restartedMain] INFO  c.p.OnlinePizzaOrderingBackendApplication -Started OnlinePizzaOrderingBackendApplication in 0.743 seconds (JVM running for 263.586)
+18-06-2023 16:39:40 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener -Condition evaluation unchanged
+18-06-2023 16:39:40 [restartedMain] INFO  c.pizzaOrdering.config.LoggerConfig -This is an informational message
+18-06-2023 16:39:40 [restartedMain] ERROR c.pizzaOrdering.config.LoggerConfig -This is an error message
+18-06-2023 16:39:40 [restartedMain] WARN  c.pizzaOrdering.config.LoggerConfig -This is warning message
+18-06-2023 16:40:51 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener -Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+18-06-2023 16:40:51 [Thread-11] INFO  o.a.catalina.core.StandardService -Stopping service [Tomcat]
+18-06-2023 16:40:51 [Thread-11] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
+18-06-2023 16:40:51 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-3 - Shutdown initiated...
+18-06-2023 16:40:51 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-3 - Shutdown completed.
+18-06-2023 16:40:51 [restartedMain] INFO  c.p.OnlinePizzaOrderingBackendApplication -Starting OnlinePizzaOrderingBackendApplication using Java 17.0.6 on jkhj with PID 7964 (D:\Vipul\CDAC  Cource_DATA_Jaipur NETCOM\Food delivery Project data\Online_Pizza_Ordering\OnlinePizzaOrdering_Backend\target\classes started by HP in D:\Vipul\CDAC  Cource_DATA_Jaipur NETCOM\Food delivery Project data\Online_Pizza_Ordering\OnlinePizzaOrdering_Backend)
+18-06-2023 16:40:51 [restartedMain] INFO  c.p.OnlinePizzaOrderingBackendApplication -No active profile set, falling back to 1 default profile: "default"
+18-06-2023 16:40:52 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+18-06-2023 16:40:52 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 13 ms. Found 10 JPA repository interfaces.
+18-06-2023 16:40:52 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat initialized with port(s): 8080 (http)
+18-06-2023 16:40:52 [restartedMain] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+18-06-2023 16:40:52 [restartedMain] INFO  o.a.catalina.core.StandardEngine -Starting Servlet engine: [Apache Tomcat/9.0.74]
+18-06-2023 16:40:52 [restartedMain] INFO  o.a.c.c.C.[.[.[/pizzaordering] -Initializing Spring embedded WebApplicationContext
+18-06-2023 16:40:52 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -Root WebApplicationContext: initialization completed in 209 ms
+18-06-2023 16:40:52 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper -HHH000204: Processing PersistenceUnitInfo [name: default]
+18-06-2023 16:40:52 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-4 - Starting...
+18-06-2023 16:40:52 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-4 - Start completed.
+18-06-2023 16:40:52 [restartedMain] INFO  org.hibernate.dialect.Dialect -HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+18-06-2023 16:40:52 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+18-06-2023 16:40:52 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Initialized JPA EntityManagerFactory for persistence unit 'default'
+18-06-2023 16:40:52 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+18-06-2023 16:40:52 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer -LiveReload server is running on port 35729
+18-06-2023 16:40:52 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat started on port(s): 8080 (http) with context path '/pizzaordering'
+18-06-2023 16:40:52 [restartedMain] INFO  c.p.OnlinePizzaOrderingBackendApplication -Started OnlinePizzaOrderingBackendApplication in 0.701 seconds (JVM running for 335.812)
+18-06-2023 16:40:52 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener -Condition evaluation unchanged
+18-06-2023 16:40:52 [restartedMain] INFO  c.pizzaOrdering.config.LoggerConfig -This is an informational message
+18-06-2023 16:40:52 [restartedMain] ERROR c.pizzaOrdering.config.LoggerConfig -This is an error message
+18-06-2023 16:40:52 [restartedMain] WARN  c.pizzaOrdering.config.LoggerConfig -This is warning message
+18-06-2023 16:41:11 [RMI TCP Connection(10)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin -Application shutdown requested.
+18-06-2023 16:41:11 [RMI TCP Connection(10)-127.0.0.1] INFO  o.a.catalina.core.StandardService -Stopping service [Tomcat]
+18-06-2023 16:41:11 [RMI TCP Connection(10)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
+18-06-2023 16:41:11 [RMI TCP Connection(10)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-4 - Shutdown initiated...
+18-06-2023 16:41:11 [RMI TCP Connection(10)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-4 - Shutdown completed.
+18-06-2023 16:41:25 [restartedMain] INFO  c.p.OnlinePizzaOrderingBackendApplication -Starting OnlinePizzaOrderingBackendApplication using Java 17.0.6 on jkhj with PID 4624 (D:\Vipul\CDAC  Cource_DATA_Jaipur NETCOM\Food delivery Project data\Online_Pizza_Ordering\OnlinePizzaOrdering_Backend\target\classes started by HP in D:\Vipul\CDAC  Cource_DATA_Jaipur NETCOM\Food delivery Project data\Online_Pizza_Ordering\OnlinePizzaOrdering_Backend)
+18-06-2023 16:41:25 [restartedMain] INFO  c.p.OnlinePizzaOrderingBackendApplication -No active profile set, falling back to 1 default profile: "default"
+18-06-2023 16:41:25 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor -Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+18-06-2023 16:41:25 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor -For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+18-06-2023 16:41:26 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+18-06-2023 16:41:26 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 45 ms. Found 10 JPA repository interfaces.
+18-06-2023 16:41:26 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat initialized with port(s): 8080 (http)
+18-06-2023 16:41:26 [restartedMain] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+18-06-2023 16:41:26 [restartedMain] INFO  o.a.catalina.core.StandardEngine -Starting Servlet engine: [Apache Tomcat/9.0.74]
+18-06-2023 16:41:26 [restartedMain] INFO  o.a.c.c.C.[.[.[/pizzaordering] -Initializing Spring embedded WebApplicationContext
+18-06-2023 16:41:26 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -Root WebApplicationContext: initialization completed in 1026 ms
+18-06-2023 16:41:26 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper -HHH000204: Processing PersistenceUnitInfo [name: default]
+18-06-2023 16:41:26 [restartedMain] INFO  org.hibernate.Version -HHH000412: Hibernate ORM core version 5.6.15.Final
+18-06-2023 16:41:26 [restartedMain] INFO  o.h.annotations.common.Version -HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+18-06-2023 16:41:26 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-1 - Starting...
+18-06-2023 16:41:27 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-1 - Start completed.
+18-06-2023 16:41:27 [restartedMain] INFO  org.hibernate.dialect.Dialect -HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+18-06-2023 16:41:27 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+18-06-2023 16:41:27 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Initialized JPA EntityManagerFactory for persistence unit 'default'
+18-06-2023 16:41:28 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+18-06-2023 16:41:28 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer -LiveReload server is running on port 35729
+18-06-2023 16:41:28 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat started on port(s): 8080 (http) with context path '/pizzaordering'
+18-06-2023 16:41:28 [restartedMain] INFO  c.p.OnlinePizzaOrderingBackendApplication -Started OnlinePizzaOrderingBackendApplication in 3.341 seconds (JVM running for 3.849)
+18-06-2023 16:41:28 [restartedMain] INFO  c.pizzaOrdering.config.LoggerConfig -This is an informational message
+18-06-2023 16:41:28 [restartedMain] ERROR c.pizzaOrdering.config.LoggerConfig -This is an error message
+18-06-2023 16:41:28 [restartedMain] WARN  c.pizzaOrdering.config.LoggerConfig -This is warning message
+18-06-2023 16:42:25 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[.[.[/pizzaordering] -Initializing Spring DispatcherServlet 'dispatcherServlet'
+18-06-2023 16:42:25 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet -Initializing Servlet 'dispatcherServlet'
+18-06-2023 16:42:25 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet -Completed initialization in 1 ms
+18-06-2023 16:43:59 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener -Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+18-06-2023 16:43:59 [Thread-4] INFO  o.a.catalina.core.StandardService -Stopping service [Tomcat]
+18-06-2023 16:43:59 [Thread-4] INFO  o.a.c.c.C.[.[.[/pizzaordering] -Destroying Spring FrameworkServlet 'dispatcherServlet'
+18-06-2023 16:43:59 [Thread-4] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
+18-06-2023 16:43:59 [Thread-4] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-1 - Shutdown initiated...
+18-06-2023 16:43:59 [Thread-4] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-1 - Shutdown completed.
+18-06-2023 16:43:59 [restartedMain] INFO  c.p.OnlinePizzaOrderingBackendApplication -Starting OnlinePizzaOrderingBackendApplication using Java 17.0.6 on jkhj with PID 4624 (D:\Vipul\CDAC  Cource_DATA_Jaipur NETCOM\Food delivery Project data\Online_Pizza_Ordering\OnlinePizzaOrdering_Backend\target\classes started by HP in D:\Vipul\CDAC  Cource_DATA_Jaipur NETCOM\Food delivery Project data\Online_Pizza_Ordering\OnlinePizzaOrdering_Backend)
+18-06-2023 16:43:59 [restartedMain] INFO  c.p.OnlinePizzaOrderingBackendApplication -No active profile set, falling back to 1 default profile: "default"
+18-06-2023 16:43:59 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+18-06-2023 16:43:59 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Finished Spring Data repository scanning in 17 ms. Found 10 JPA repository interfaces.
+18-06-2023 16:43:59 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat initialized with port(s): 8080 (http)
+18-06-2023 16:43:59 [restartedMain] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+18-06-2023 16:43:59 [restartedMain] INFO  o.a.catalina.core.StandardEngine -Starting Servlet engine: [Apache Tomcat/9.0.74]
+18-06-2023 16:43:59 [restartedMain] INFO  o.a.c.c.C.[.[.[/pizzaordering] -Initializing Spring embedded WebApplicationContext
+18-06-2023 16:43:59 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext -Root WebApplicationContext: initialization completed in 250 ms
+18-06-2023 16:43:59 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper -HHH000204: Processing PersistenceUnitInfo [name: default]
+18-06-2023 16:43:59 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-2 - Starting...
+18-06-2023 16:43:59 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-2 - Start completed.
+18-06-2023 16:43:59 [restartedMain] INFO  org.hibernate.dialect.Dialect -HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+18-06-2023 16:43:59 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+18-06-2023 16:43:59 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Initialized JPA EntityManagerFactory for persistence unit 'default'
+18-06-2023 16:44:00 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+18-06-2023 16:44:00 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer -LiveReload server is running on port 35729
+18-06-2023 16:44:00 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer -Tomcat started on port(s): 8080 (http) with context path '/pizzaordering'
+18-06-2023 16:44:00 [restartedMain] INFO  c.p.OnlinePizzaOrderingBackendApplication -Started OnlinePizzaOrderingBackendApplication in 0.866 seconds (JVM running for 155.467)
+18-06-2023 16:44:00 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener -Condition evaluation unchanged
+18-06-2023 16:44:00 [restartedMain] INFO  c.pizzaOrdering.config.LoggerConfig -This is an informational message
+18-06-2023 16:44:00 [restartedMain] ERROR c.pizzaOrdering.config.LoggerConfig -This is an error message
+18-06-2023 16:44:00 [restartedMain] WARN  c.pizzaOrdering.config.LoggerConfig -This is warning message
+18-06-2023 16:45:13 [RMI TCP Connection(7)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin -Application shutdown requested.
+18-06-2023 16:45:13 [RMI TCP Connection(7)-127.0.0.1] INFO  o.a.catalina.core.StandardService -Stopping service [Tomcat]
+18-06-2023 16:45:13 [RMI TCP Connection(7)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Closing JPA EntityManagerFactory for persistence unit 'default'
+18-06-2023 16:45:13 [RMI TCP Connection(7)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-2 - Shutdown initiated...
+18-06-2023 16:45:13 [RMI TCP Connection(7)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource -HikariPool-2 - Shutdown completed.
