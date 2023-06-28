@@ -73,7 +73,7 @@ public class UserController {
 	
 	
 	//user login ==> that can be customer, admin,deliveryPartner------------------------------------------------------------
-	@PostMapping("/login")
+	@GetMapping("/login")
 	ResponseEntity<Users> loginCustomer(@RequestParam String email, @RequestParam String password) {
 		Users users1 = this.usersService.login(email, password);
 		return ResponseEntity.status(HttpStatus.OK).body(users1);

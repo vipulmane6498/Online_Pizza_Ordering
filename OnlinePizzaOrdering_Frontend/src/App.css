@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+}
+
+.logo{
+  position: fixed;
+  height: auto;
+  left: 0px;
+}
+
+.white-text {
+  color: white;
+}
