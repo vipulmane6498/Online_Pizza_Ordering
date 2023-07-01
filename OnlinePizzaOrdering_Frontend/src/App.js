@@ -13,6 +13,7 @@ import Footer from './Layouts/Footer';
 import Login from './Pages/Login';
 import Register from './Pages/Register';
 import AdminApp from './Users/AdminApp';
+import PageNotFoundComponent from './adminComponents/PageNotFoundComponent';
 
 
 function App() {
@@ -22,7 +23,11 @@ function App() {
        <AdminApp/>
         <Router>
           <Routes>
+            {/* when user add wrong URL  */}
+            {/* <Route  path='/*' element={<PageNotFoundComponent />}></Route> */}
+            
             <Route path="/" element={<HomePage />} />   {/* without loggedIn homepage */}
+
             <Route path="/aboutus" element={<AboutUs />} />
             <Route path="/aboutus" element={<AboutUs />} />
 

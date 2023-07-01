@@ -36,8 +36,8 @@ public class Pizza extends BaseEntity{
 	@Column (name = "is_veg")
 	private boolean isVeg;
 	
-	@Column (name = "is_NonVeg")
-	private boolean isNonVeg;
+//	@Column (name = "is_NonVeg")
+//	private boolean isNonVeg;
 	
 	@Column(name="in_stock")
 	private boolean inStock;

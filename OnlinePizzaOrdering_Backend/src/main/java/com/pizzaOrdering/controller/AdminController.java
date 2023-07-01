@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.pizzaOrdering.exception.ResourceNotFoundException;
 import com.pizzaOrdering.model.Category;
 import com.pizzaOrdering.model.Offer;
 import com.pizzaOrdering.model.Order;
@@ -47,60 +50,72 @@ public class AdminController {
 //Category added by admin---------------------------------------------------------------------------------------------------
 	
 	//add category
-	@PostMapping("/category")
-	public Category addCategory(@RequestBody Category category) {
-		this.categoryService.addCategory(category);
-		return category;
+	@PostMapping("/addcategory")
+	public 	ResponseEntity<Category> addCategory(@RequestBody Category category) {
+		return ResponseEntity.status(HttpStatus.CREATED).body(categoryService.addCategory(category));
 	}
 	
 	//edit category
 	@PutMapping("/editcategory")
-	public Category updateCategory(@RequestBody Category category) {
+	public ResponseEntity<Category> updateCategory(@RequestBody Category category) {
 		System.out.println(category);
-		return this.categoryService.editCategoryByID(category);
+		return ResponseEntity.status(HttpStatus.OK).body(categoryService.editCategoryByID(category));
+
 	}
 	
 	
 	//get category by id
 	@GetMapping("/category/id/{id}")
-	public Optional<Category> getCategoryById(@PathVariable long id){
+	public Category getCategoryById(@PathVariable long id){
 		System.out.println("in fetch Category of user  " + id);
-		return categoryService.findCategoryByID(id);
+		return categoryService.findCategoryByID(id).orElseThrow(()-> new ResourceNotFoundException("Category with given id is not found!"));
 	}
 	
 	//get all categories
-	@GetMapping("/categories")
+	@GetMapping("/allcategories")
 	public List<Category> seeAllCategory(){
 		return categoryService.allCategory();
 	}
 	
 	//delete category by id
 	@DeleteMapping("/category/id/{id}")
-	public  void deleteCategoryById(@PathVariable long id) {
+	public ResponseEntity<String>  deleteCategoryById(@PathVariable long id){
 		categoryService.deleteCategoryByID(id);
-	}
+		return ResponseEntity.noContent().build();	
+	}	
+//	OR WE CAN DELETE BY BELOW NORMAL WAY************
+//	public  void deleteCategoryById(@PathVariable long id) {
+//		categoryService.deleteCategoryByID(id);
+//	}
 	
 	
 //Pizza =>  handle by admin---------------------------------------------------
 	
 	//Add Pizza by admin
 	@PostMapping("/addpizza")
-	public Pizza addPizza(@RequestBody Pizza pizza) {
-		this.pizzaService.addPizza(pizza);
-		return pizza;
+	public ResponseEntity<Pizza> addPizza(@RequestBody Pizza pizza) {
+		return ResponseEntity.status(HttpStatus.CREATED).body(pizzaService.addPizza(pizza));
 	}
 	
 	//edit pizza by admin
 	@PutMapping("/editpizza")
-	 public Pizza editPizza(@RequestBody Pizza pizza) {
-		return this.pizzaService.updatePizza(pizza);
+	 public ResponseEntity<Pizza> editPizza(@RequestBody Pizza pizza) {
+		return ResponseEntity.status(HttpStatus.ACCEPTED).body(pizzaService.updatePizza(pizza));
 	}
 	
 	//delete pizza by admin which admin has added
 	@DeleteMapping("/deletepizza/id/{id}")
-	public void removePizzaById(@PathVariable long id) {
+	public ResponseEntity<String>  removePizzaById(@PathVariable long id) {
 		pizzaService.deletePizzaByID(id);
+		  return ResponseEntity.noContent().build();
 	}
+	
+//	OR WE CAN DELETE BY BELOW NORMAL WAY************
+//	@DeleteMapping("/deletepizza/id/{id}")
+//	public void  removePizzaById(@PathVariable long id) {
+//		pizzaService.deletePizzaByID(id);
+//	}
+	
 	
 	
 
@@ -109,9 +124,8 @@ public class AdminController {
 	
 	//add Offer
 	@PostMapping("/addoffer")
-	public Offer addOffer(@RequestBody Offer offer) {
-		offerService.addOffer(offer);
-		return offer;
+	public ResponseEntity<Offer> addOffer(@RequestBody Offer offer) {
+		return ResponseEntity.status(HttpStatus.CREATED).body(offerService.addOffer(offer));
 	}
 	
 	//get offer by id
@@ -129,17 +143,21 @@ public class AdminController {
 	
 	//edit offer
 	@PutMapping("/editoffer")
-	public Offer editOffer(@RequestBody Offer offer) {
+	public ResponseEntity<Offer> editOffer(@RequestBody Offer offer) {
 		System.out.println(offer);
-		return offerService.updateOffer(offer);
+		return ResponseEntity.status(HttpStatus.OK).body(offerService.updateOffer(offer));
 	}
 	
 	//delete offer
 	@DeleteMapping("/deleteoffer/id/{id}")
-	public void deleteOfferById(@PathVariable long id) {
+	public ResponseEntity<String> deleteOfferById(@PathVariable long id) {
 		offerService.deleteOfferById(id);
+		return ResponseEntity.noContent().build();
 	}
-	
+//	OR WE CAN DELETE BY BELOW NORMAL WAY************
+//	public void deleteOfferById(@PathVariable long id) {
+//		offerService.deleteOfferById(id);
+//	}
 	
 //Order*******************************************************************
 	
@@ -157,10 +175,14 @@ public class AdminController {
 		
 	//Deleting users pizza order=> if order is mistakenly placed
 	@DeleteMapping("/order/deleteorder/id/{id}")
-	public void deleteOrderById(@PathVariable long id) {
+	public ResponseEntity<String> deleteOrderById(@PathVariable long id) {
 		orderService.deleteOrderById(id);
+		return ResponseEntity.noContent().build();
 	}
-	
+//	OR WE CAN DELETE BY BELOW NORMAL WAY************
+//	public void deleteOrderById(@PathVariable long id) {
+//		orderService.deleteOrderById(id);
+//	}
 	
 //Reviews------------------------------------------------------------
 	
@@ -175,9 +197,14 @@ public class AdminController {
 	
 	//delete review by id
 	@DeleteMapping("/deletereview/id/{id}")
-	public void deleteReview(@PathVariable long id) {
+	public ResponseEntity<String> deleteReview(@PathVariable long id) {
 		 reviewService.deleteReviewById(id);
+		 return ResponseEntity.noContent().build();
 	}
+//	OR WE CAN DELETE BY BELOW NORMAL WAY************
+//	public void deleteReview(@PathVariable long id) {
+//		 reviewService.deleteReviewById(id);
+//	}
 	
 	//get all reviews
 	@GetMapping("/allreviews")

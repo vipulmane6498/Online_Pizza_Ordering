@@ -6,8 +6,9 @@ import {
   MDBBtn,
   MDBIcon
 } from 'mdb-react-ui-kit';
-
+import { BackendBaseURL } from '../BackendUrl';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 // import { useNavigate } from 'react-router-dom';
 
 
@@ -26,7 +27,7 @@ const Register = () => {
 
   // const navigate = useNavigate;
 
-  const hostName = "http://localhost:8080/pizzaordering";
+  // const hostName = "http://localhost:8080/pizzaordering";
 
   //useState: To set the the current state and update the value using set
   const [id, setId] = useState('');
@@ -44,7 +45,7 @@ const Register = () => {
     try {
       // const result = await axios.get("http://localhost:8080/pizzaordering/register")
 
-      await axios.post(`${hostName}/register`, {
+      await axios.post(`${BackendBaseURL}/register`, {
         //assign frontend user data to backend with backend variables
         first_name: firstname,
         last_name: lastname,
@@ -141,7 +142,7 @@ const Register = () => {
         <button type='submit' className="white-text" style={{ width: "570px", height: "37.8px", border: 'none', borderRadius: "5px", backgroundColor: '#0275D8' }} onClick={save} >Sign Up</button>
         <div className='text-center'>
           <p>
-            Already a member? <a href='http://localhost:3000/login'>Login</a>
+            Already a member? <Link to='/login'>Login</Link>
           </p>
           <p>or sign up with:</p>,
           

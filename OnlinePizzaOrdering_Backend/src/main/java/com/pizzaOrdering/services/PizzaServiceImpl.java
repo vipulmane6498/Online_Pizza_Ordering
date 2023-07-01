@@ -39,7 +39,7 @@ public class PizzaServiceImpl implements PizzaService {
 		updPiz.setAvg_rating(pizza.getAvg_rating());
 		updPiz.setSummary(pizza.getSummary());
 		updPiz.setVeg(pizza.isVeg());
-		updPiz.setNonVeg(pizza.isNonVeg());
+//		updPiz.setNonVeg(pizza.isNonVeg());
 		updPiz.setInStock(pizza.isInStock());
 		this.pizzaDao.save(updPiz);
 		

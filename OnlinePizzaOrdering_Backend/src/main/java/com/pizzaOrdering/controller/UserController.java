@@ -67,8 +67,8 @@ public class UserController {
 	
 	//user registration ==> that can be customer, admin,deliveryBoy-----------------------------------------------------
 	@PostMapping("/register")  //go to postman and post new user data in JSON format to register
-	public Users register(@RequestBody Users users) {
-		return usersService.addUsers(users);
+	public ResponseEntity<Users> register(@RequestBody Users users) {
+		return ResponseEntity.status(HttpStatus.CREATED).body(usersService.addUsers(users));
 	}
 	
 	
@@ -92,8 +92,8 @@ public class UserController {
 	
 	//update/edit user credential 
 	@PutMapping("/edituserscreds")
-	Users updateUser(@RequestBody Users users) {
-		return usersService.editUser(users);
+	ResponseEntity<Users> updateUser(@RequestBody Users users) {
+		return ResponseEntity.status(HttpStatus.ACCEPTED).body(usersService.editUser(users));
 	}
 	
 	//delete/remove user from DB
@@ -101,16 +101,19 @@ public class UserController {
 	Users removeUser(@PathVariable long id) {
 		return usersService.deleteUsers(id);
 	}
+
 	
 	
 //Address => user------------------------------------------------------
 	
-	@PostMapping("/address")
-	public Address addAddress(@RequestBody Address address) {
-		this.addressService.addAddress(address);
-		return address;
+	@PostMapping("/addaddress")
+	public  ResponseEntity<Address> addAddress(@RequestBody Address address) {
+		return ResponseEntity.status(HttpStatus.CREATED).body(addressService.addAddress(address));
 	}
-	
+
+
+
+
 	@GetMapping("/addresses")
 	public List<Address> seeAllAddress(){
 		return this.addressService.findAllAddress();
@@ -122,21 +125,26 @@ public class UserController {
 	}
 	
 	@DeleteMapping("/address/id/{id}")
-	public void deleteAddressUserByID(@PathVariable long id) {
+	public ResponseEntity<String> deleteAddressByID(@PathVariable long id) {
 		addressService.deleteAddressById(id);
+		return ResponseEntity.noContent().build();
 	}
+//	OR WE CAN DELETE BY BELOW NORMAL WAY************
+//	public void deleteAddressUserByID(@PathVariable long id) {
+//		addressService.deleteAddressById(id);
+//	}
 	
 	//update/edit user address 
 	@PutMapping("/editusersaddress/id/{id}")
-	Address updateUserAddress(@RequestBody Address address) {
-		return addressService.editUsersAddress(address);
+	ResponseEntity<Address> updateUserAddress(@RequestBody Address address) {
+		return ResponseEntity.status(HttpStatus.ACCEPTED).body(addressService.editUsersAddress(address));
 	}
 	
 	
 //Pizza Home Page or handle by customer------------------------------------------------------
 	
 	//show all pizza on home page
-	@GetMapping("/Pizzas")
+	@GetMapping("/pizzas")
 	public List<Pizza> getAllPizza(){
 		return this.pizzaService.findAllPizza();
 		}
@@ -157,8 +165,8 @@ public class UserController {
 	
 	//add to cart
 	@PostMapping("/addtocart")
-	public ShoppingCart addToCart(@RequestParam("userId") long userId, @RequestParam("pizzaId") long pizzaId) {
-		return shoppingCartService.addToCart(userId, pizzaId);
+	public ResponseEntity<ShoppingCart> addToCart(@RequestParam("userId") long userId, @RequestParam("pizzaId") long pizzaId) {
+		return ResponseEntity.status(HttpStatus.CREATED).body(shoppingCartService.addToCart(userId, pizzaId));
 	}
 	
 	//remove Item from cart
@@ -189,9 +197,15 @@ public class UserController {
 	}
 	
 	@DeleteMapping("/deletecartitem/id/{id}")
-	public void deleteCartItemById(@PathVariable long id) {
+	public ResponseEntity<String> deleteCartItemById(@PathVariable long id) {
 		shoppingCartService.deleteCartItemByID(id);
+		return ResponseEntity.noContent().build();
 	}
+//OR WE CAN DELETE BY BELOW NORMAL WAY************
+//	public void deleteCartItemById(@PathVariable long id) {
+//		shoppingCartService.deleteCartItemByID(id);
+//	}
+	
 	
 //Review------------------------------------------------------------
 //Order & Review => once you place the order then you are applicable to provide a Review--------------------------------------------------------
@@ -201,8 +215,8 @@ public class UserController {
 	
 	//add order
 	@PostMapping("/placeorder")
-	public Order addOrder(@RequestBody Order order) {
-		return orderService.addOrder(order);
+	public ResponseEntity<Order> addOrder(@RequestBody Order order) {
+		return ResponseEntity.status(HttpStatus.CREATED).body(orderService.addOrder(order));
 	}
 	
 	//get order by orderID
@@ -231,10 +245,9 @@ public class UserController {
 	//user can =>  add reviews & fetch users review by userID & fetch product review by product ID
 
 	//add review
-	@PostMapping("/review")
-	public Review addReview(@RequestBody Review review) {
-		reviewService.addReview(review);
-		return review;
+	@PostMapping("/addreview")
+	public ResponseEntity<Review> addReview(@RequestBody Review review) {
+		return ResponseEntity.status(HttpStatus.CREATED).body(reviewService.addReview(review));
 	}
 	
 	//get user review by user id

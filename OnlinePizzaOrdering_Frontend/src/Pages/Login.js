@@ -8,7 +8,9 @@ import {
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 // import Register from './Register';
-const hostName = "http://localhost:8080/pizzaordering";
+// const hostName = "http://localhost:8080/pizzaordering";
+import { BackendBaseURL } from '../BackendUrl';
+import { Link } from 'react-router-dom';
 
 
 const Login = () => {
@@ -32,7 +34,7 @@ const Login = () => {
     var signIn = async () => {
         console.log("Inside Login")
         // await axios.post(`http://localhost:8080/pizzaordering/login?email=${user.email}&password=${user.password}`
-        await axios.get(`${hostName}/login`,{
+        await axios.get(`${BackendBaseURL}/login`,{
             params: {
               email: user.email,
               password: user.password
@@ -140,7 +142,7 @@ const Login = () => {
                 <button type='submit' className="white-text" style={{ width: "470px", height: "37.8px", border: 'none', borderRadius: "5px", backgroundColor: '#0275D8' }} onClick={signIn}>SignIn</button>
                 <div className='text-center'>
                     <p>
-                        Not a member? <a href='http://localhost:3000/register'>Register</a>
+                        Not a member? <Link to='/register'>Register</Link>
                     </p>
                     <p>or sign up with:</p>,
 
