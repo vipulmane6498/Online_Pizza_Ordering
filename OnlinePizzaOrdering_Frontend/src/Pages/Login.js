@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+// const hostName = "http://localhost:8080/pizzaordering";
 import {
     MDBInput,
     MDBRow,
@@ -7,11 +8,12 @@ import {
 } from 'mdb-react-ui-kit';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-// import Register from './Register';
-// const hostName = "http://localhost:8080/pizzaordering";
+
 import { BackendBaseURL } from '../BackendUrl';
 import { Link } from 'react-router-dom';
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'; 
 
 const Login = () => {
 
@@ -30,6 +32,9 @@ const Login = () => {
     // var Register = () => {
     //     navigate.push("/register");
     // }
+
+
+        const notify = () => toast("Wow so easy!");
 
     var signIn = async () => {
         console.log("Inside Login")
@@ -67,8 +72,9 @@ const Login = () => {
                 console.log(res.data.userRole);
 
                 setMessage("Login Succesfull!");
-                navigate('/allpizza')
-                alert("Login Successfull!!");
+                toast.success('Login Successful!');
+                navigate("/allpizza");
+                // alert("Login Successfull!!");
 
 
             }
@@ -94,18 +100,23 @@ const Login = () => {
 
                 console.log(res.data.userRole);
 
-                setMessage("Login successfull!");
-                navigate('/adminhome');
-                alert("Login Successfull!!");
-
+                // setMessage("Login successfull!");
+                navigate("/adminhome");
+                toast.success("Login Successful!");
+                // alert("Login Successfull!!");
+                
             }
             else {
-                alert("Login failed, Plz enter valid Credentials.");
+                // alert("Login failed, Plz enter valid Credentials.");
                 setUser({ email: "", password: "" });
                 setMessage("Something went wrong");
             }
+            // toast.success("Login Successful!");
 
-        }).catch((e)=>{console.log(e)})
+        }).catch((e)=>{
+            console.log(e);
+            toast.error('Bad Credentials!');
+        })
  
 
     }
@@ -123,8 +134,10 @@ const Login = () => {
 
     return (
         <div className="container shadow bordered" style={{ marginBottom: "35px", marginTop: "35px", width: "500px", borderRadius: "10px" }}>
+            {/* <ToastContainer /> */}
             <br />
             <h2 style={{ "margin": "10px", textAlign: 'center' }}>Login</h2>
+            {/* <ToastContainer /> */}
             {/* <br /> */}
             <form>
                 <MDBRow className='mb-4'>
@@ -140,6 +153,10 @@ const Login = () => {
             </form>
 
                 <button type='submit' className="white-text" style={{ width: "470px", height: "37.8px", border: 'none', borderRadius: "5px", backgroundColor: '#0275D8' }} onClick={signIn}>SignIn</button>
+                <ToastContainer />
+
+                {/* <button type='submit' className="white-text" style={{ width: "470px", height: "37.8px", border: 'none', borderRadius: "5px", backgroundColor: '#0275D8' }} onClick={() => { signIn(); notify(); }}>SignIn</button> */}
+              
                 <div className='text-center'>
                     <p>
                         Not a member? <Link to='/register'>Register</Link>
@@ -164,7 +181,7 @@ const Login = () => {
 
                 </div>
                 <br />
-            
+                
             <div>
                 {message}
             </div>

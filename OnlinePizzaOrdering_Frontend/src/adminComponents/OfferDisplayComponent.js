@@ -50,7 +50,10 @@ const OfferDisplayComponent = () => {
     }
 
     var EditOffer = (id) => {
-        window.location.href =`http://localhost:3000/admineditoffer/${id}`;
+        // window.location.href =`http://localhost:3000/admineditoffer/${id}`;
+        navigate(`/admineditoffer/${id}`);
+
+        
     }
 
     var Logout = ()=>{

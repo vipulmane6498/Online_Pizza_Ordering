@@ -97,11 +97,11 @@ const navigate= useNavigate();
         <div>
             <AdminNavbar/>
 
-        <div class="container mt-4">
+        <div className="container mt-4">
             <form>
-                <div class="form-group">
+                <div className="form-group">
                     <label>name</label>
-                    <input type="text" class="form-control" placeholder="enter pizza name"
+                    <input type="text" className="form-control" placeholder="enter pizza name"
                         value={name}
                         onChange={(event) => {
                             setName(event.target.value);
@@ -109,9 +109,9 @@ const navigate= useNavigate();
                     />
                 </div>
 
-                <div class="form-group">
+                <div className="form-group">
                     <label>Price</label>
-                    <input type="number" class="form-control" placeholder="enter Price"
+                    <input type="number" className="form-control" placeholder="enter Price"
                         value={price}
                         onChange={(event) => {
                             setPrice(event.target.value);
@@ -119,9 +119,9 @@ const navigate= useNavigate();
                     />
                 </div>
 
-                <div class="form-group">
+                <div className="form-group">
                     <label>Avg_rating</label>
-                    <input type="number" class="form-control" placeholder="enter Rating"
+                    <input type="number" className="form-control" placeholder="enter Rating"
                         value={avg_rating}
                         onChange={(event) => {
                             setAvg_rating(event.target.value);
@@ -129,9 +129,9 @@ const navigate= useNavigate();
                     />
                 </div>
 
-                <div class="form-group">
+                <div className="form-group">
                     <label>summary</label>
-                    <input type="text" class="form-control" placeholder="enter Summary"
+                    <input type="text" className="form-control" placeholder="enter Summary"
                         value={summary}
                         onChange={(event) => {
                             setSummary(event.target.value);
@@ -150,9 +150,9 @@ const navigate= useNavigate();
                     />
                 </div>
 
-                <div class="form-group">
+                <div className="form-group">
                     <label>IsVeg</label>
-                    <input type="text" class="form-control" placeholder="enter veg or non-veg"
+                    <input type="text" className="form-control" placeholder="enter veg or non-veg"
                         value={isVeg}
                         onChange={(event) => {
                             setIsVeg(event.target.value);
@@ -160,15 +160,15 @@ const navigate= useNavigate();
                     />
                 </div>
 
-                <div class="form-group">
+                <div className="form-group">
                     <label>pizzaCategory</label>
-                    {/* <input type="text" class="form-control"placeholder="Select categories"
+                    {/* <input type="text" className="form-control"placeholder="Select categories"
             value={pizzaCategory}
             onChange={(event)=>{
                 setIsVeg(event.target.value);
             }}
             /> */}
-                    <select id="dropdown" class="form-control" value={pizzaCategory} onChange={handleOptionChange}>
+                    <select id="dropdown" className="form-control" value={pizzaCategory} onChange={handleOptionChange}>
                         <option value="">Choose an category</option>
                         {category.map(categ => (
                             <option key={categ.id} value={categ.value}>{categ.categoryName}</option>
@@ -177,9 +177,9 @@ const navigate= useNavigate();
 
                 </div>
 
-                <div class="form-group">
+                <div className="form-group">
                     <label>InStock</label>
-                    <input type="text" class="form-control" placeholder="enter stock"
+                    <input type="text" className="form-control" placeholder="enter stock"
                         value={inStock}
                         onChange={(event) => {
                             setInStock(event.target.value);
@@ -188,7 +188,7 @@ const navigate= useNavigate();
                 </div>
 
 
-                <button class="btn btn-primary mt-4" onClick={save}>Add Product</button>
+                <button className="btn btn-primary mt-4" onClick={save}>Add Product</button>
             </form>
         </div>
         </div>

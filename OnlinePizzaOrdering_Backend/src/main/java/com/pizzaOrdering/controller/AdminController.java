@@ -162,7 +162,7 @@ public class AdminController {
 //Order*******************************************************************
 	
 	//show all Orders
-	@PutMapping("/orders")
+	@GetMapping("/orders")
 	public List<Order> seeAllOrders() {
 		return orderService.findAllOrders();
 	}

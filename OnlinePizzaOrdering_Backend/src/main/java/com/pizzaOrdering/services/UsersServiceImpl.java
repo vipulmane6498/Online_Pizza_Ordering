@@ -61,9 +61,9 @@ public class UsersServiceImpl implements UsersService {
 	//GET => get all users data
 	@Override
 	public List<Users> getAllUsers() {
-	// TODO Auto-generated method stub
-	return usersDao.findAll();
-}
+		return usersDao.findAll();
+	}
+	
 	
 	//GET => user by id
 	@Override

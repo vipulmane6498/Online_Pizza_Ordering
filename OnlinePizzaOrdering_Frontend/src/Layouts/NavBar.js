@@ -17,7 +17,7 @@ import { MDBDropdown, MDBDropdownMenu, MDBDropdownToggle, MDBDropdownItem } from
 import logo from '../Assets/HomePizzaLogo.gif';
 import { useNavigate } from 'react-router-dom';
 
-
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
     const [showNavColor, setShowNavColor] = useState(false);
@@ -97,7 +97,7 @@ const NavBar = () => {
                     </MDBNavbarNav>
 
                     {/* Cart button */}
-                    <a href="http://localhost:3000/cart" className="btn btn-secondary" style={{ marginRight: '14px'}}>
+                    <a to="/cart" className="btn btn-secondary" style={{ marginRight: '14px'}}>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="16"

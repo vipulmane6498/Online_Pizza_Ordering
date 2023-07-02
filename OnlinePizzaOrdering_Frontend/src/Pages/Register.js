@@ -9,6 +9,10 @@ import {
 import { BackendBaseURL } from '../BackendUrl';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 // import { useNavigate } from 'react-router-dom';
 
 
@@ -69,6 +73,7 @@ const Register = () => {
     catch (err) {
       console.log("Error: " + err);
       alert("Registration Failed");
+      toast.err("bad input");
     }
 
   }

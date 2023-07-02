@@ -89,11 +89,11 @@ const navigate = useNavigate();
   return (
     <div>
         <AdminNavbar/>
-    <div class="container mt-4">
+    <div className="container mt-4">
             <form>
-                <div class="form-group">
+                <div className="form-group">
                     <label>name</label>
-                    <input type="text" class="form-control" placeholder="enter offer name"
+                    <input type="text" className="form-control" placeholder="enter offer name"
                         value={name}
                         onChange={(event) => {
                             setName(event.target.value);
@@ -101,9 +101,9 @@ const navigate = useNavigate();
                     />
                 </div>
 
-                <div class="form-group">
+                <div className="form-group">
                     <label>discount</label>
-                    <input type="number" class="form-control" placeholder="enter discount"
+                    <input type="number" className="form-control" placeholder="enter discount"
                         value={discount}
                         onChange={(event) => {
                           setDiscount(event.target.value);
@@ -111,9 +111,9 @@ const navigate = useNavigate();
                     />
                 </div>
 
-                <div class="form-group">
+                <div className="form-group">
                     <label>valid_from</label>
-                    <input type="number" class="form-control" placeholder="enter starting date"
+                    <input type="number" className="form-control" placeholder="enter starting date"
                         value={valid_from}
                         onChange={(event) => {
                           setValid_from(event.target.value);
@@ -121,9 +121,9 @@ const navigate = useNavigate();
                     />
                 </div>
 
-                <div class="form-group">
+                <div className="form-group">
                     <label>valid_upto</label>
-                    <input type="text" class="form-control" placeholder="enter ending date"
+                    <input type="text" className="form-control" placeholder="enter ending date"
                         value={valid_upto}
                         onChange={(event) => {
                           setValid_upto(event.target.value);
@@ -131,18 +131,18 @@ const navigate = useNavigate();
                     />
                 </div>
 
-                <div class="form-group">
+                <div className="form-group">
                     <label>code</label>
-                    <input type="text" class="form-control" placeholder="enter code"
+                    <input type="text" className="form-control" placeholder="enter code"
                         value={code}
                         onChange={(event) => {
                             setCode(event.target.value);
                         }}
                     />
                 </div>
-                <div class="form-group">
+                <div className="form-group">
                     <label>terms_conditions</label>
-                    <input type="text" class="form-control" placeholder="enter terms a& Conditions"
+                    <input type="text" className="form-control" placeholder="enter terms a& Conditions"
                         value={terms_conditions}
                         onChange={(event) => {
                           setTerms_conditions(event.target.value);
@@ -150,7 +150,7 @@ const navigate = useNavigate();
                     />
                 </div>
 
-                <button class="btn btn-primary mt-4" onClick={save}>Add Product</button>
+                <button className="btn btn-primary mt-4" onClick={save}>Add Product</button>
             </form>
         </div>
     </div>

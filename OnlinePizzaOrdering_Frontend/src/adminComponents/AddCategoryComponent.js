@@ -52,11 +52,11 @@ async function save(event){
     <AdminNavbar />
 
 
-    <div class="container mt-4">
+    <div className="container mt-4">
         <form>
-        <div class="form-group">
+        <div className="form-group">
             <label>CategoryName</label>
-            <input type="text" class="form-control"placeholder="enter Category name"
+            <input type="text" className="form-control"placeholder="enter Category name"
             value={categoryName}
             onChange={(event)=>{
                 setCategoryName(event.target.value);
@@ -64,9 +64,9 @@ async function save(event){
             />
         </div>
 
-        <div class="form-group">
+        <div className="form-group">
             <label>description</label>
-            <input type="text" class="form-control"placeholder="enter Description"
+            <input type="text" className="form-control"placeholder="enter Description"
             value={description}
             onChange={(event)=>{
                 setDescription(event.target.value);
@@ -74,7 +74,7 @@ async function save(event){
             />
         </div>
 
-        <button class="btn btn-primary mt-4" onClick={save}>Added</button>
+        <button className="btn btn-primary mt-4" onClick={save}>Added</button>
         </form>
 </div>
 </div>

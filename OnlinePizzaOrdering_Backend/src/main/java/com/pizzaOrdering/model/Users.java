@@ -8,7 +8,7 @@ import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.Table;
 
-import org.hibernate.validator.constraints.Length;
+
 
 //import org.hibernate.validator.constraints.Length;
 

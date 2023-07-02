@@ -11,4 +11,8 @@ import com.pizzaOrdering.model.Users;
 public interface UsersDao extends JpaRepository<Users, Long>{
 
 	Optional<Users> findByEmailAndPassword(String email, String password);
+	
+	
+	
+	
 }

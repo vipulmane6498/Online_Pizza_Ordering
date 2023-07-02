@@ -37,7 +37,8 @@ const DisplayCategoryComponent = () => {
     }
 ////////////////////////////////////////////////////////////////////////////////////////////
     var EditCategory = (id) => {
-        window.location.href =`http://localhost:3000/admineditcategory/${id}`;
+        // window.location.href =`http://localhost:3000/admineditcategory/${id}`;
+        navigate(`/admineditcategory/${id}`);
        }
 //////////////////////////////////////////////////////////////////////////////////////////////////
     var Logout = ()=>{

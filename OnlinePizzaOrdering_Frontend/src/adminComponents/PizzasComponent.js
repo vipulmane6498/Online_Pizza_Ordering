@@ -35,7 +35,7 @@ const PizzasComponent = () => {
     }
   ]);
 
-  var naviagte = useNavigate();
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios.get(`${BackendBaseURL}/pizzas`).then((res) => {
@@ -59,13 +59,15 @@ const PizzasComponent = () => {
 
 ////////////////////////////////////////////////////////////////////////////////////////////
   var EditProduct = (id) => {
-    window.location.href =`http://localhost:3000/admineditproduct/${id}`;
+    // window.location.href =`http://localhost:3000/admineditproduct/${id}`;
+    navigate(`/admineditproduct/${id}`);
+
 }
 ////////////////////////////////////////////////////////////////////////////////////////////
   var Logout = () => {
     sessionStorage.removeItem("isLoggedIn");
     sessionStorage.removeItem("userName");
-    naviagte("/login");
+    navigate("/login");
   }
 
 
@@ -75,7 +77,7 @@ const PizzasComponent = () => {
       <AdminNavbar/>
     <div style={{ marginTop: "20px" }}>
       {/* <AdminNavbar />  */}
-      <div class="container mt-4">
+      <div className="container mt-4">
         <div style={{ float: "right" }}>
           <br></br>
           {/* <a href="http://localhost:3000/adminaddproduct" className="btn btn-info">Add Pizza</a> */}
@@ -90,7 +92,7 @@ const PizzasComponent = () => {
         </div>
         <br></br> 
 
-        <figure class="text-center"><h1>MY PRODUCT LIST</h1></figure>
+        <figure className="text-center"><h1>MY PRODUCT LIST</h1></figure>
         {/* <br/> */}
         <hr/>
         <div className="row">
@@ -135,7 +137,7 @@ const PizzasComponent = () => {
                         </button>
                       </td>
                       <td>
-                        <button type="button" class="btn btn-outline-warning" onClick={() => EditProduct(pizza.id)}>
+                        <button type="button" className="btn btn-outline-warning" onClick={() => EditProduct(pizza.id)}>
                           Edit
 
                         </button>
