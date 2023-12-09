@@ -25,6 +25,9 @@
    </ol>
 
  <h3>Entity Relationship Diagram(ERD): </h3>
+ 
+ ![image](https://github.com/vipulmane6498/Online_Pizza_Ordering/assets/113690721/ce1c91c1-bee7-4adf-843a-eb4257851055)
+
 <hr>
 <h3>User Interaface Images:</h3> 
 <h4>A. Customer:</h4>
