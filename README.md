@@ -6,6 +6,12 @@
      <li>Database: MySQL</li>
      <li>Frontend: ReactJS</li>
    </ol>
+
+ <h3>User Interfaces:</h3>
+ <ol>
+     <li>Customer</li>
+     <li>Admin</li>
+   </ol>
 <!-- <br> -->
  <h3>Working flow:</h3>
   <ol>
@@ -21,6 +27,7 @@
  <h3>Entity Relationship Diagram(ERD): </h3>
 <hr>
 <h3>User Interaface Images:</h3> 
+<h4>A. Customer:</h4>
 
 1. Home:
    ![1  Home](https://github.com/vipulmane6498/Online_Pizza_Ordering/assets/113690721/90865625-81a2-419e-acc5-89720bc0c4ae)
@@ -65,6 +72,28 @@
     ![13  My Review List after giving the review](https://github.com/vipulmane6498/Online_Pizza_Ordering/assets/113690721/9af16a03-a847-4c4d-a821-d424930d4f0c)
 
  
+<h4>B.Admin</h4>
+
+15. Admin can see all users:
+    ![image](https://github.com/vipulmane6498/Online_Pizza_Ordering/assets/113690721/b228e56e-4c2d-481f-81f5-34eb5a6683ad)
+
+16. Admin can add, remove, update & delete Food Item:
+
+    ![image](https://github.com/vipulmane6498/Online_Pizza_Ordering/assets/113690721/84c4dbdb-182c-411f-a83d-8d770d508147)
+
+    
+    add foot Item:
+    ![image](https://github.com/vipulmane6498/Online_Pizza_Ordering/assets/113690721/d9548b31-1399-462b-9f50-f3b8c8a6a69d)
+
+
+    Update food Item:
+    ![image](https://github.com/vipulmane6498/Online_Pizza_Ordering/assets/113690721/704ce7c8-ba9e-4486-981e-14f3d6e4cbaa)
+
+17. Admin can see all orders edit them and delete:
+    ![image](https://github.com/vipulmane6498/Online_Pizza_Ordering/assets/113690721/acddf883-3c28-4284-ba16-24412aff45cf)
+
+18. 
+
 
 
 
