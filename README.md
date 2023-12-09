@@ -20,8 +20,9 @@
 
  <h3>Entity Relationship Diagram(ERD): </h3>
 
-<h3>User Interaface Images:</h3>
-<image src="![1  Home](https://github.com/vipulmane6498/Online_Pizza_Ordering/assets/113690721/cf458d87-99e4-44e9-ae9a-5cdb380c5fea)">
+<h3>User Interaface Images:</h3> 
+1. Home
+![1  Home](https://github.com/vipulmane6498/Online_Pizza_Ordering/assets/113690721/90865625-81a2-419e-acc5-89720bc0c4ae)
 
 
  
