@@ -95,7 +95,7 @@
 17. Admin can see all orders edit them and delete:
     ![image](https://github.com/vipulmane6498/Online_Pizza_Ordering/assets/113690721/acddf883-3c28-4284-ba16-24412aff45cf)
 
-18. 
+  <h1 style="text-align: center;">Thank you</h1>
 
 
 
